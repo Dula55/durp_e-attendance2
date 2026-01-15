@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>NSUK URP E-Attendance System</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body { font-family: 'Lexend', sans-serif; }
+    </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-background-light dark:bg-background-dark">
+
+<div class="relative z-10 max-w-md w-full bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 text-center">
+
+    <!-- Logo -->
+    <img src="{{ url_for('static', filename='NSUK-logo.jpg') }}"
+         class="mx-auto h-24 w-24 rounded-xl shadow mb-6"
+         alt="NSUK Logo">
+
+    <h1 class="text-3xl font-bold text-slate-900 dark:text-white">
+        NSUK URP
+    </h1>
+    <p class="text-slate-600 dark:text-slate-400 mt-2 mb-8">
+        E-Attendance System
+    </p>
+
+    <!-- Actions -->
+    <div class="flex flex-col gap-4">
+        <a href="{{ url_for('home') }}"
+           class="bg-primary hover:bg-primary-hover text-white py-3 rounded-xl font-semibold transition">
+            Enter System
+        </a>
+
+        <a href="{{ url_for('login') }}"
+           class="border border-primary text-primary py-3 rounded-xl font-semibold hover:bg-primary/10 transition">
+            Login
+        </a>
+
+        <a href="{{ url_for('signup') }}"
+           class="text-sm text-slate-500 hover:text-primary transition">
+            Create Account
+        </a>
+    </div>
+
+    <p class="mt-8 text-xs text-slate-500">
+        Version 1.0.0 • Multi-Device Support
+    </p>
+</div>
+
+</body>
+</html>
